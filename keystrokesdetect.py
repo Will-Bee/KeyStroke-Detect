@@ -40,7 +40,7 @@ def on_press(key):
                 fh.write(" ")
         fh.close()
     except:
-        print("[!]: Failed with saving data, wrong path")
+        print("[!]: Failed with saving data")
 
 def rewrite():
     print("[X]: Do you want to rewrite all saved keys?")
@@ -53,8 +53,10 @@ def rewrite():
             fh = open(location, 'w')
             fh.write("")
             fh.close()
+            print("[✓]: Data deleted!")
+            print("")
         except:
-            print("[!]: Failed with saving data, wrong path")
+            print("[!]: Failed with saving data")
             print("")
 
 def exiting():
