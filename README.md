@@ -1,5 +1,5 @@
-## KeyStroke-Detect
+### KeyStroke-Detect
 
-#Program that is running in background and logging keystrokes!
+# Program that is running in background and logging keystrokes!
 
-#Just run and go!
+# Just run and go!
