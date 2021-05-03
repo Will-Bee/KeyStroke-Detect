@@ -70,6 +70,8 @@ def exiting():
         Key_to_escape = ""
 
 def main():
+    print("[-]_Made by: Will-Bee_[-]")
+    print("")
     rewrite()
     exiting()
     print("[!] Listening:")
