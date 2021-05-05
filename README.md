@@ -4,6 +4,6 @@
 
 After running, enter your options and than minimalize, it will log all keystrokes, special keys included
 
-`pip install pynput`
+```pip install pynput```
 
-`python KeyStrokesLogger.py`
+```python KeyStrokesLogger.py```
