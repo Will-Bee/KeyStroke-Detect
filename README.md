@@ -9,3 +9,6 @@ Press ESC or ctrl + ! to exit, or setup your own button
 ```pip install pynput```
 
 ```python KeyStrokesLogger.py```
+
+```location = "Desktop/keys.txt"
+# Final location of keys.txt```
